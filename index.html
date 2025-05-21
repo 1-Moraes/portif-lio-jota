@@ -1,0 +1,474 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio | João Moraes Santos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .skill-pill:hover {
+            transform: scale(1.05);
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #111111 0%, #8B0000 100%);
+        }
+        
+        .title-shadow {
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+        }
+        
+        .box-shadow-title {
+            box-shadow: 0 4px 6px -1px rgba(139, 0, 0, 0.4);
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            display: inline-block;
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navegação -->
+    <nav class="bg-black shadow-md fixed w-full z-10">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-red-700">Meu<span class="text-white">Portfólio</span></a>
+            
+            <div class="hidden md:flex space-x-10">
+                <a href="#inicio" class="text-gray-300 hover:text-red-600 transition">Início</a>
+                <a href="#sobre" class="text-gray-300 hover:text-red-600 transition">Sobre</a>
+                <a href="#projetos" class="text-gray-300 hover:text-red-600 transition">Projetos</a>
+                <a href="#habilidades" class="text-gray-300 hover:text-red-600 transition">Habilidades</a>
+                <a href="#contato" class="text-gray-300 hover:text-red-600 transition">Contato</a>
+            </div>
+            
+            <button class="md:hidden focus:outline-none" id="menu-button">
+                <svg class="w-6 h-6 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        
+        <!-- Menu Mobile -->
+        <div class="md:hidden hidden bg-black w-full py-3 px-6 shadow-inner" id="mobile-menu">
+            <div class="flex flex-col space-y-4">
+                <a href="#inicio" class="text-gray-300 hover:text-red-600 transition">Início</a>
+                <a href="#sobre" class="text-gray-300 hover:text-red-600 transition">Sobre</a>
+                <a href="#projetos" class="text-gray-300 hover:text-red-600 transition">Projetos</a>
+                <a href="#habilidades" class="text-gray-300 hover:text-red-600 transition">Habilidades</a>
+                <a href="#contato" class="text-gray-300 hover:text-red-600 transition">Contato</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="pt-28 pb-20 gradient-bg">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 text-center md:text-left text-white">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6 title-shadow">Olá, eu sou <span class="text-red-500">João Moraes</span></h1>
+                <p class="text-xl mb-8 box-shadow-title">Professor de Informática</p>
+                <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+                    <a href="#projetos" class="bg-red-700 text-white px-6 py-3 rounded-full font-medium hover:bg-red-800 transition shadow-lg">Meus Projetos</a>
+                    <a href="#contato" class="bg-transparent border-2 border-white text-white px-6 py-3 rounded-full font-medium hover:bg-white hover:text-red-700 transition">Entre em Contato</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 mt-12 md:mt-0 flex justify-center">
+                <div class="w-64 h-64 rounded-full bg-white p-3 shadow-xl">
+                    <div class="w-full h-full rounded-full bg-gray-200 flex items-center justify-center overflow-hidden">
+                        <img style="margin-top: 70px;" src="foto_perfil.png" alt="">
+                            <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Mim -->
+    <section id="sobre" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 text-black relative">
+                <span class="box-shadow-title bg-red-700 text-white px-6 py-2">Sobre Mim</span>
+            </h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <div class="bg-gray-50 p-8 rounded-lg border-l-4 border-red-700 shadow-lg">
+                        <p class="text-gray-700 leading-relaxed mb-4">
+                            Olá! Sou um professor de informática apaixonado por tecnologia e educação. Com experiência em ensino de programação, sistemas operacionais e ferramentas digitais, busco sempre inspirar meus alunos a desenvolverem habilidades tecnológicas essenciais para o futuro.
+                        </p>
+                        <p class="text-gray-700 leading-relaxed">
+                            Minha jornada profissional me permitiu trabalhar com diversos níveis de ensino, desde iniciantes até alunos avançados, onde pude desenvolver metodologias eficientes e projetos práticos que facilitam o aprendizado. Estou sempre me atualizando sobre as novas tecnologias e tendências educacionais para oferecer o melhor conteúdo aos meus alunos.
+                        </p>
+                    </div>
+                </div>
+                <div class="md:w-1/2 md:pl-12">
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="bg-white p-6 rounded-lg shadow-md border-t-2 border-red-700">
+                            <div class="text-red-700 text-4xl mb-4">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-2 text-black">Formação</h3>
+                            <p class="text-gray-500 text-sm">Técnico de Informática</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md border-t-2 border-red-700">
+                            <div class="text-red-700 text-4xl mb-4">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-2 text-black">Experiência</h3>
+                            <p class="text-gray-600">3+ anos de experiência</p>
+                            <p class="text-gray-500 text-sm">Ensino de Informática</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md border-t-2 border-red-700">
+                            <div class="text-red-700 text-4xl mb-4">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-2 text-black">Cursos</h3>
+                            <p class="text-gray-600">15+ cursos ministrados</p>
+                            <p class="text-gray-500 text-sm">Programação e Tecnologia</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md border-t-2 border-red-700">
+                            <div class="text-red-700 text-4xl mb-4">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-2 text-black">Alunos</h3>
+                            <p class="text-gray-600">200+ alunos formados</p>
+                            <p class="text-gray-500 text-sm">De diversos níveis</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projetos -->
+    <section id="projetos" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-4 text-black relative">
+                <span class="box-shadow-title bg-red-700 text-white px-6 py-2">Meus Projetos</span>
+            </h2>
+            <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">Confira alguns dos meus projetos educacionais e materiais didáticos que desenvolvi para facilitar o aprendizado de informática.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Projeto 1 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg project-card transition duration-300 border-b-4 border-red-700">
+                    <div class="h-48 bg-black flex items-center justify-center">
+                        <svg class="w-20 h-20 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-black">Curso de Programação Básica</h3>
+                        <p class="text-gray-600 mb-4">Desenvolvimento de material didático completo para ensino de lógica de programação e algoritmos para iniciantes.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-red-100 text-red-800 text-xs px-3 py-1 rounded-full">Python</span>
+                            <span class="bg-gray-100 text-gray-800 text-xs px-3 py-1 rounded-full">HTML & CSS</span>
+                            <span class="bg-red-100 text-red-800 text-xs px-3 py-1 rounded-full">Algoritmos</span>
+                        </div>
+                        <a href="#" class="text-red-700 font-medium hover:text-red-800 transition flex items-center">
+                            Ver detalhes
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Projeto 2 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg project-card transition duration-300 border-b-4 border-red-700">
+                    <div class="h-48 bg-black flex items-center justify-center">
+                        <svg class="w-20 h-20 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-black">Apostila de Office</h3>
+                        <p class="text-gray-600 mb-4">Criação de apostila completa sobre pacote Office, com exercícios práticos e tutoriais passo a passo para cada ferramenta.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-red-100 text-red-800 text-xs px-3 py-1 rounded-full">Word</span>
+                            <span class="bg-gray-100 text-gray-800 text-xs px-3 py-1 rounded-full">Excel</span>
+                            <span class="bg-red-100 text-red-800 text-xs px-3 py-1 rounded-full">PowerPoint</span>
+                        </div>
+                        <a href="#" class="text-red-700 font-medium hover:text-red-800 transition flex items-center">
+                            Ver detalhes
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Projeto 3 -->
+                <!-- <div class="bg-white rounded-xl overflow-hidden shadow-lg project-card transition duration-300 border-b-4 border-red-700">
+                    <div class="h-48 bg-black flex items-center justify-center">
+                        <svg class="w-20 h-20 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-black">Plataforma de Vídeo-aulas</h3>
+                        <p class="text-gray-600 mb-4">Desenvolvimento de plataforma online com vídeo-aulas sobre manutenção de computadores e redes para cursos técnicos.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-red-100 text-red-800 text-xs px-3 py-1 rounded-full">HTML/CSS</span>
+                            <span class="bg-gray-100 text-gray-800 text-xs px-3 py-1 rounded-full">JavaScript</span>
+                            <span class="bg-red-100 text-red-800 text-xs px-3 py-1 rounded-full">Vídeos</span>
+                        </div>
+                        <a href="#" class="text-red-700 font-medium hover:text-red-800 transition flex items-center">
+                            Ver detalhes
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div> -->
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="bg-red-700 text-white px-8 py-3 rounded-full font-medium hover:bg-red-800 transition shadow-lg">Ver todos os projetos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Habilidades -->
+    <section id="habilidades" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-4 text-black relative">
+                <span class="box-shadow-title bg-red-700 text-white px-6 py-2">Minhas Habilidades</span>
+            </h2>
+            <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">Estas são as tecnologias e metodologias de ensino com as quais trabalho para criar experiências educacionais eficientes e envolventes.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Habilidades Técnicas -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-6 flex items-center text-black">
+                        <span class="text-red-700 mr-3">
+                            <i class="fas fa-code"></i>
+                        </span>
+                        Habilidades Técnicas
+                    </h3>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium text-gray-700">Programação (Python, PHP)</span>
+                                <span class="text-gray-600">80%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-red-700 h-2 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium text-gray-700">Desenvolvimento Web</span>
+                                <span class="text-gray-600">85%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-red-700 h-2 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium text-gray-700">Banco de Dados</span>
+                                <span class="text-gray-600">80%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-red-700 h-2 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium text-gray-700">Sistemas Operacionais</span>
+                                <span class="text-gray-600">95%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-red-700 h-2 rounded-full" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium text-gray-700">Redes de Computadores</span>
+                                <span class="text-gray-600">85%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-red-700 h-2 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Habilidades Pedagógicas -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-6 flex items-center text-black">
+                        <span class="text-red-700 mr-3">
+                            <i class="fas fa-chalkboard"></i>
+                        </span>
+                        Habilidades Pedagógicas
+                    </h3>
+                    
+                    <div class="flex flex-wrap gap-3">
+                        <span class="bg-red-100 text-red-800 px-4 py-2 rounded-full skill-pill transition duration-300">Metodologias Ativas</span>
+                        <span class="bg-gray-100 text-gray-800 px-4 py-2 rounded-full skill-pill transition duration-300">Aprendizagem Baseada em Projetos</span>
+                        <span class="bg-red-100 text-red-800 px-4 py-2 rounded-full skill-pill transition duration-300">Gamificação</span>
+                        <span class="bg-gray-100 text-gray-800 px-4 py-2 rounded-full skill-pill transition duration-300">Sala de Aula Invertida</span>
+                        <span class="bg-red-100 text-red-800 px-4 py-2 rounded-full skill-pill transition duration-300">Avaliação Formativa</span>
+                        <span class="bg-gray-100 text-gray-800 px-4 py-2 rounded-full skill-pill transition duration-300">Ensino Híbrido</span>
+                        <span class="bg-red-100 text-red-800 px-4 py-2 rounded-full skill-pill transition duration-300">Criação de Material Didático</span>
+                        <span class="bg-gray-100 text-gray-800 px-4 py-2 rounded-full skill-pill transition duration-300">Tutoria Individual</span>
+                        <span class="bg-red-100 text-red-800 px-4 py-2 rounded-full skill-pill transition duration-300">Ensino Adaptativo</span>
+                        <span class="bg-gray-100 text-gray-800 px-4 py-2 rounded-full skill-pill transition duration-300">Feedback Construtivo</span>
+                        <span class="bg-red-100 text-red-800 px-4 py-2 rounded-full skill-pill transition duration-300">Planejamento de Aulas</span>
+                        <span class="bg-gray-100 text-gray-800 px-4 py-2 rounded-full skill-pill transition duration-300">Gestão de Sala de Aula</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="py-20 gradient-bg">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-white mb-4 title-shadow">Entre em Contato</h2>
+            <p class="text-gray-100 text-center mb-12 max-w-2xl mx-auto">Interessado em aulas particulares ou consultoria em informática? Entre em contato para conversarmos sobre como posso ajudar você ou sua instituição.</p>
+            
+            <div class="bg-white rounded-xl shadow-xl overflow-hidden max-w-4xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2">
+                    <div class="p-8 md:p-12">
+                        <h3 class="text-2xl font-semibold mb-6 text-black">Envie uma mensagem</h3>
+                        <form class="space-y-6">
+                            <div>
+                                <label class="block text-gray-700 mb-2" for="name">Nome</label>
+                                <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500" placeholder="Seu nome">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 mb-2" for="email">Email</label>
+                                <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500" placeholder="seu@email.com">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 mb-2" for="message">Mensagem</label>
+                                <textarea id="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500" placeholder="Como posso ajudar?"></textarea>
+                            </div>
+                            <button type="button" class="bg-red-700 text-white px-6 py-3 rounded-lg font-medium hover:bg-red-800 transition w-full shadow-md">Enviar Mensagem</button>
+                           
+                        </form>
+                    </div>
+                    <div class="bg-gray-900 p-8 md:p-12 flex flex-col justify-center">
+                        <h3 class="text-2xl font-semibold mb-6 text-white">Informações de Contato</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="text-red-500 mr-4">
+                                    <i class="fas fa-envelope text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-white">Email</h4>
+                                    <p class="text-gray-300">joaopedromo8712@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="text-red-500 mr-4">
+                                    <i class="fas fa-phone text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-white">Telefone</h4>
+                                    <p class="text-gray-300">(11) 99602-3506</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="text-red-500 mr-4">
+                                    <i class="fas fa-map-marker-alt text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-white">Localização</h4>
+                                    <p class="text-gray-300">São Paulo, Brasil</p>
+                                </div>
+                            </div>
+                            <div class="pt-4">
+                                <h4 class="font-medium text-white mb-3">Redes Sociais</h4>
+                                <div class="flex space-x-4">
+                                    <a href="https://www.linkedin.com/in/jo%C3%A3o-m-4b6450298?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" class="bg-red-700 text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-red-800 transition">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </a>
+                                    <a href="https://www.instagram.com/jp._.dosantos?igsh=N2I3YWdpMzVzbjdm&utm_source=qr" class="bg-red-700 text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-red-800 transition">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <a href="#" class="text-2xl font-bold">Meu<span class="text-red-500">Portfólio</span></a>
+                    <p class="text-gray-400 mt-2">Educação e tecnologia transformando vidas</p>
+                </div>
+                <div class="flex flex-wrap justify-center gap-8">
+                    <a href="#inicio" class="text-gray-300 hover:text-red-500 transition">Início</a>
+                    <a href="#sobre" class="text-gray-300 hover:text-red-500 transition">Sobre</a>
+                    <a href="#projetos" class="text-gray-300 hover:text-red-500 transition">Projetos</a>
+                    <a href="#habilidades" class="text-gray-300 hover:text-red-500 transition">Habilidades</a>
+                    <a href="#contato" class="text-gray-300 hover:text-red-500 transition">Contato</a>
+                </div>
+            </div>
+            <hr class="border-gray-800 my-8">
+            <div class="text-center text-gray-400">
+                <p>&copy; 2025 João Moraes. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Menu Mobile Toggle
+        const menuButton = document.getElementById('menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Fechar menu ao clicar em um link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+        
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                window.scrollTo({
+                    top: targetElement.offsetTop - 70,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'940803f0348cf229',t:'MTc0NzM2ODUyMi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
